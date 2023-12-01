@@ -6,7 +6,5 @@ let calibrationValues = require("fs")
             .filter(g => !isNaN(g))
   )
   .map(h => Number([h[0], ...h.slice(-1)].join('')))
-  
-  
 
 console.log(calibrationValues.reduce((a,b) => b + a, 0));
