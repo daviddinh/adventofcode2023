@@ -43,4 +43,4 @@ for (let j = 0; j < seeds.length; j+=2) {
 
 console.log(currentLowest)
 
-// NOTE: This solution works but takes ages :)
+// NOTE: This solution works but takes ages, logging lowest between each of the seed pairs will save you a lot of time :)
