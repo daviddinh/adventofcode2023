@@ -1,4 +1,5 @@
-// DONT USE THIS ONE UNLESS YOU WANT ACTUAL POKER SORTING....
+// NOTE TO SELF - READ THE QUESTION INSTEAD OF ASSUMING YOU KNOW 
+// THE RULES OF CAMEL CARDS - NOT THE SAME AS POKER...
 let input = require("fs")
   .readFileSync("./07-input.txt", "utf-8")
   .split("\n")
@@ -42,7 +43,6 @@ let hands =
       return hand.concat(handType)
     })
 
-// console.log(hands)
 let sortedHands = hands
   .sort((a, b) => {
     let sameHand = handOrder.indexOf(a[4]) - handOrder.indexOf(b[4])
@@ -56,9 +56,5 @@ let sortedHands = hands
     }
   })
   .reverse()
-  // .map((e,i) => [...e, i+1]).map( e => [e[1],e[4]] ).map(e => e[0] * e[1])
-
 
 console.log(sortedHands.map((e,i) => e[2] * (i+1)).reduce((a,b) => a + b, 0))
-// console.log(sortedHands)
-// console.log(sortedHands.reduce((acc, card, index) =>  acc + (+card[1]*(index+1)), 0))
